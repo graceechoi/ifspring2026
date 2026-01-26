@@ -1,0 +1,28 @@
+* {
+    font-family: monospace;
+}
+
+h3 {
+
+}
+
+.speaker {
+    font-weight: bold;
+    
+}
+
+.dialogue {
+    
+}
+
+.action {
+    font-style: italic;
+    opacity: 0.5;
+}
+
+div {
+    background-color: rgb(219, 235, 241);
+    padding: 30px;
+    border-radius: 40px;
+}
+

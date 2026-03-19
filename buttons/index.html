@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buttons &mdash; James Fawcett</title>
+
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/5c8b38fe1c.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            margin: 40px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .button_container {
+            border: 1px solid #ddd;
+            margin: 0 10px 10px 0;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+
+
+        a#btn_spotify {
+            display: inline-block;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 10px 40px 0 40px;
+            background-color: #2ebd59;
+            border: 2px solid #2ebd59;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all .5s;
+        }
+
+        a#btn_spotify:hover {
+            background-color: #fff;
+            border: 2px solid #000;
+            color: #000;
+        }
+
+        a#btn_amazon {
+            display: block;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 75px;
+            padding-top: 8px;
+            background-color: #232f3e;
+            color: #fff;
+            text-align: center;
+            font-size: 60px;
+            transition: all .2s;
+        }
+
+        a#btn_amazon:hover {
+            background-color: #fc9a18;
+        }
+
+        a#btn_twitter {
+            display: inline-block;
+            height: 40px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin: auto;
+            margin-top: 105px;
+            padding: 10px 30px 0 30px;
+            background-color: #56cdf1;
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a#btn_twitter:hover {
+
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
+            background: rgb(46, 191, 236);
+            /* Old browsers */
+            background: -moz-linear-gradient(-45deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ebfec', endColorstr='#28a5cb', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+
+        }
+
+        a#btn_indiegogo {
+            display: inline-block;
+            position: relative;
+            margin: auto;
+            margin-top: 100px;
+            padding: 8px 16px;
+            background-color: #fff;
+            color: #eb1478;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: -2px;
+            transition: all .2s;
+        }
+
+        a#btn_indiegogo:before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #eb1478;
+            transition: all .5s;
+        }
+
+        a#btn_indiegogo:hover {
+            color: #fff;
+        }
+
+        a#btn_indiegogo:hover:before {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        a#btn_indiegogo span {
+            position: relative;
+            z-index: 10;
+        }
+
+        a#btn_nike {
+            display: inline-block;
+            margin-top: 100px;
+            font-family: "Anton", sans-serif;
+            font-weight: 130px;
+            font-style: normal;
+            font-size: 24px;
+            height: 50px;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 15px 30px 0 30px;
+            border-radius: 50px;
+        }
+
+        a#btn_nike .swoosh-svg {
+            height: 50px;
+            margin: -13px 0 -15px 0;
+            fill: #111;
+        }
+
+        a#btn_nike:hover {
+            background-color: black;
+            color: white;
+            transition: all .5s;
+        }
+
+        a#btn_instagram {
+            display: inline-block;
+            margin-top: 100px;
+            font-size: 50px;
+            text-decoration: none;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efb52d+2,ce2140+58,b53296+100 */
+            background: linear-gradient(45deg, #efb52d 2%, #ce2140 58%, #b53296 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            color: white;
+            padding: 3px;
+            border-radius: 15px;
+        }
+
+        a#btn_instagram:hover {
+            transform: scale(1.1);
+
+            transition: transform 0.3s;
+        }
+
+        a#btn_instagram .fa-burst {
+            transform: translate(-82%, -5%) scale(0.05);
+            position: absolute;
+            z-index: 9999;
+        }
+
+        a#btn_instagram:active .fa-burst {
+            transform: translate(-82%, -5%) scale(0.5);
+            color: rgb(255, 229, 165);
+            text-shadow: 0px 0px 18px #FFFFFF;
+        }
+
+        a#btn_newyorker {
+            display: inline-block;
+            font-family: "EB Garamond", serif;
+            margin-top: 90px;
+            width: 180px;
+            height: 50px;
+            text-decoration: none;
+            color: black;
+            background-color: #f5f5f0;
+            padding: 25px 5px 25px 5px;
+            overflow: hidden;
+            border: solid 1.5px rgb(185, 185, 185)
+        }
+
+        a#btn_newyorker h1 {
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        a#btn_newyorker h2 {
+            font-size: 10px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        a#btn_newyorker img {
+            display: absolute;
+            width: 100%;
+            transform: translate(0, 50%);
+        }
+
+        a#btn_newyorker:hover img {
+            transform: translate(0, -60%);
+            transition: transform 0.5s;
+        }
+
+        a#btn_explodingkittens {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-top: 100px;
+            text-decoration: none;
+            background-color: black;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        @keyframes burn {
+            from {
+                transform: rotate(-7deg);
+            }
+
+            33% {
+                transform: rotate(4deg);
+            }
+
+            66% {
+                transform: rotate(-4deg);
+            }
+
+            to {
+                transform: rotate(7deg);
+            }
+        }
+
+        a#btn_explodingkittens:hover img {
+            display: block;
+            transform-origin: center bottom;
+            animation-name: burn;
+            animation-duration: 0.1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        a#btn_explodingkittens:hover {
+            background-color: #7c0516;
+            transition: background-color 0.2s;
+        }
+
+        a#btn_lyft {
+            display: inline-block;
+            margin-top: 100px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            color: #ff00bf;
+            background-color: #fff0f5;
+            padding: 15px 30px 25px 30px;
+            border-radius: 50px;
+        }
+
+        a#btn_lyft .fa-car-side {
+            position: absolute;
+            transform: translate(-150%, 200%);
+        }
+
+        a#btn_lyft:hover .fa-car-side {
+            transform: translate(40%, 200%);
+            opacity: 0;
+            transition: all .4s;
+        }
+
+        a#btn_lyft:hover {
+            background-color: #ff00bf;
+            color: #fff0f5;
+            padding: 15px 30px 5px 30px;
+
+            transition: all .7s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Button Styling &mdash; James Fawcett</h1>
+
+        <div class="button_container">
+            <a href="http://www.spotify.com" target="_blank" id="btn_spotify">Spotify</a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.amazon.com" target="_blank" id="btn_amazon"><i class="fa fa-amazon"></i></a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.twitter.com" target="_blank" id="btn_twitter">twitter</a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.indiegogo.com" target="_blank" id="btn_indiegogo"><span>indiegogo</span></a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.nike.com" target="_blank" id="btn_nike">
+                <svg aria-hidden="true" class="swoosh-svg" focusable="false" viewBox="0 0 24 24" role="img" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+                        clip-rule="evenodd"></path>
+                </svg>
+
+                <span>NIKE</span>
+            </a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.instagram.com" target="_blank" id="btn_instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-burst"></i>
+            </a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.newyorker.com" target="_blank" id="btn_newyorker">
+                <h2>THE</h2>
+                <h1>NEW YORKER</h1>
+                <img
+                    src="https://admin.itsnicethat.com/images/_Nl70Nd3th4XEAHh1AeJH0ffbvE=/102614/format-webp%7Cwidth-2880/5b2b782b7fa44cc24f00108a.jpg">
+
+            </a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.explodingkittens.com" target="_blank" id="btn_explodingkittens">
+                <img width="49" height="43"
+                    src="https://www.explodingkittens.com/cdn/shop/files/logo-mobile_430x.png?v=1662716357" alt="exploding kittenslogo">
+            </a>
+        </div>
+
+        <div class="button_container">
+            <a href="http://www.lyft.com" target="_blank" id="btn_lyft">
+                <span data-testid="core-ui-icon" title="Lyft Logo" class="sc-jEACwC fWFepk">
+                    <svg width="48" height="48" viewBox="0 0 32 32" style="fill:currentColor" aria-hidden="true" focusable="false" data-testid="core-ui-icon-lyft">
+                        <path d="M23.596 7.073v8.57c0 2.71 1.93 4.64 4.64 4.64H29v-3.087h-.233c-1.044 0-1.556-.513-1.556-1.557v-.934H29v-3.087h-1.79V7.073h-3.614zm-.815 7.632h-1.79v5.579h-3.614v-8.667c0-2.579 1.93-4.544 4.64-4.544h.764v3.088h-.233c-1.009 0-1.522.487-1.557 1.456h1.79v3.087zM11.219 16.49v-4.873H7.605v5.57c0 1.965 1.22 3.276 3.062 3.276 1.11 0 2.035-.465 2.307-1.132 0 1.347-.944 2.215-2.36 2.215a4.357 4.357 0 0 1-1.982-.495v3.11c.74.32 1.627.473 2.657.473 3.167 0 5.097-1.978 5.097-5.202v-7.815h-3.614v4.873c0 .513-.316.886-.776.886s-.776-.373-.776-.886zm-3.75 3.47c-.644-.724-.855-1.404-.855-2.772V7.073H3v10.83c0 1.565 1.022 2.556 2.645 2.556.68 0 1.312-.193 1.824-.5z"></path>
+                    </svg>
+                </span>
+                <i class="fa-solid fa-car-side"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -30,6 +30,7 @@ img {
 }
 
 .pop-up {
+    font-family: "Roboto Mono", monospace;
     opacity: 0;
     position: absolute;
     top: 0; 
@@ -105,6 +106,7 @@ a.right:hover span.pop-up {
 }
 
 a {
+    
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -131,9 +133,12 @@ section {
 }
 
 h2 {
-    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 21px;
     font-weight: 800;
     text-align: center;
+    text-decoration: underline wavy white;
+    text-underline-offset: 4px;
 }
 
 .flex-row {
@@ -230,8 +235,9 @@ em {
 }
 
 p#separate-text {
-    font-size: 16px;
-    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    font-weight: 500;
     font-style: italic;
     text-align: center;
     max-width: 480px;
@@ -301,7 +307,7 @@ ul {
 }
 
 li {
-    border: black solid 1.5px;
+    border: white solid 1.5px;
     border-radius: 10px;
     width: 160px;
     height: 160px;
@@ -320,6 +326,8 @@ h3 {
 }
 
 h4 {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: -0.4px;
     font-size: 12px;
     font-weight: 400;
     font-style: italic;
@@ -362,12 +370,14 @@ p.first-description {
 }
 
 p.quote {
-    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500;
     font-style: italic;
     text-align: left;
 }
 
 p.source {
+    font-family: "Roboto Mono", monospace;
     font-weight: 600;
     font-style: italic;
     text-align: right;
@@ -457,6 +467,7 @@ footer a {
     display: inline;
     font-style: italic;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .inline-link:hover {
